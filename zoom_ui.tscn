@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://b10oomui00000"]
+
+[ext_resource type="Script" path="res://zoom_ui.gd" id="1_zui"]
+
+[node name="ZoomUI" type="PanelContainer"]
+anchors_preset = -1
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 286.0
+offset_bottom = 96.0
+mouse_filter = 1
+script = ExtResource("1_zui")
+
+[node name="HBox" type="HBoxContainer" parent="."]
+theme_override_constants/separation = 8
+
+[node name="ZoomOut" type="Button" parent="HBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 72)
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+text = "−"
+
+[node name="ZoomIn" type="Button" parent="HBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 72)
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 36
+text = "+"
+
+[node name="TiltToggle" type="Button" parent="HBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 72)
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 22
+toggle_mode = true
+text = "Gyro Off"

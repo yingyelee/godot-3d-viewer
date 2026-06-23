@@ -1,0 +1,30 @@
+/*
+  # 必须:Godot 4.x HTML5 跨域隔离,否则游戏白屏
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Resource-Policy: cross-origin
+  # 通用:不缓存 HTML,主入口每次校验
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.pck
+  Content-Type: application/octet-stream
+  Cache-Control: public, max-age=31536000, immutable
+
+/index.wasm
+  Content-Type: application/wasm
+  Cache-Control: public, max-age=31536000, immutable
+
+/index.js
+  Content-Type: application/javascript
+  Cache-Control: public, max-age=31536000, immutable
+
+/index.audio.worklet.js
+  Content-Type: application/javascript
+  Cache-Control: public, max-age=31536000, immutable
+
+/index.audio.position.worklet.js
+  Content-Type: application/javascript
+  Cache-Control: public, max-age=31536000, immutable
